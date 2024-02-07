@@ -79,9 +79,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   
   function openModal(videoUrl) {
-    let modal = document.getElementById("myModal");
-    let videoElement = document.getElementById("popupVideo");
+    let modal = document.getElementById("popup");
+    let videoElement = document.getElementById("popup-video");
     videoElement.src = videoUrl;
+    videoElement.style.width = "100%";
+    videoElement.style.height = "100%";
     modal.style.display = "block";
   }
   
@@ -90,8 +92,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   
   function closeModal() {
-    const modal = document.getElementById("myModal");
-    const videoElement = document.getElementById("popupVideo");
+    const modal = document.getElementById("popup");
+    const videoElement = document.getElementById("popup-video");
     videoElement.src = "";
     modal.style.display = "none";
   }
